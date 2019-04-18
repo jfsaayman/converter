@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+
+  converter-services:
+    build: converter-services/
+    container_name: converter-services
+    ports:
+     - 80:80
