@@ -1,0 +1,8 @@
+Click <button class="convert">=</button> to do the convertion.
+<ul class="formulas">
+  <li *ngFor="let formula of formulas">
+    <div><input #inputValue /><span class="badge">{{formula.fromType}}</span> converted to <span class="badge">{{formula.toType}}</span>
+    <button class="convert" title="convert value" (click)="convert(formula, inputValue.value)">=</button>
+    {{formula.result}}</div>
+  </li>
+</ul>
