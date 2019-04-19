@@ -1,11 +1,10 @@
 <div *ngFor="let formula of formulas" class="input-group input-group-sm mb-3 form-row align-items-center">
-  <input #inputValue type="text" class="form-control" value="1" aria-describedby="basic-addon1">
-  <div class="input-group-append">
-    <span class="input-group-text" id="basic-addon1">{{formula.fromType}}</span>
-    <span class="input-group-text">converted to {{formula.toType}}</span>
+  <input #inputValue type="number" class="form-control" value="1" aria-describedby="basic-addon1">
+  <div class="input-group-append input-group-sm">
+    <input type="text" class="form-control" id="basic-addon1" readonly value="{{formula.fromType}} converted to {{formula.toType}}">
     <button class="btn btn-outline-secondary" type="button" (click)="convert(formula, inputValue.value)">=</button>
   </div>
-  <div class="input-group-append">
-    <span class="input-group-text" id="basic-addon2">{{formula.result}}{{formula.toType}}</span>
+  <div class="input-group-append input-group-sm">
+    <input type="text" class="form-control" id="basic-addon2" readonly value="{{formula.result}}{{formula.toType}}">
   </div>
 </div>
