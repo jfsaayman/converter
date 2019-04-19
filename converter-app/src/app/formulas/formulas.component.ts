@@ -6,7 +6,7 @@ import { ConvertionResult } from '../convertionResult';
 @Component({
   selector: 'app-formulas',
   templateUrl: './formulas.component.html',
-  styleUrls: ['./formulas.component.css']
+  styleUrls: ['./formulas.component.css', '../../../node_modules/bootstrap/dist/css/bootstrap.min.css']
 })
 export class FormulasComponent implements OnInit {
 

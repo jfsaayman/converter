@@ -1,9 +1,16 @@
 version: '2'
 
 services:
-
   converter-services:
     build: converter-services/
     container_name: converter-services
+    image: converter/converter-services
     ports:
      - 80:80
+
+  converter-app:
+    build: converter-app/
+    container_name: converter-app
+    image: converter/converter-app
+    ports:
+     - 8080:4200
